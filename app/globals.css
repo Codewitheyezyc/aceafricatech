@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --primary-navy: #0B0757;
+  --primary-navy-dark: #060436;
+  --primary-navy-light: #181285;
+  --primary-orange: #EF7F1A;
+  --primary-orange-hover: #D96E0F;
+  --bg-slate: #F8FAFC;
+  --text-dark: #0F172A;
+  --text-muted: #475569;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: var(--text-dark);
+  font-family: var(--font-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  overflow-x: hidden;
+}
+
+/* Custom Utilities & Animations */
+.bg-navy-gradient {
+  background: linear-gradient(135deg, #0B0757 0%, #060436 100%);
+}
+
+.bg-hero-glow {
+  background: radial-gradient(circle at 50% 20%, rgba(239, 127, 26, 0.15) 0%, rgba(11, 7, 87, 0) 70%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card-dark {
+  background: rgba(11, 7, 87, 0.65);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orange-gradient-text {
+  background: linear-gradient(135deg, #EF7F1A 0%, #FFA84D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.92; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
