@@ -4,46 +4,55 @@ const deliverables = [
   {
     title: "Career Path Discovery",
     icon: Compass,
+    iconBg: "bg-amber-100 text-[#EF7F1A] border-amber-200",
     description: "We help you identify your natural strengths, give them their professional names, and map out the exact remote career path that fits who you are. Most people skip this step. It's the most important one."
   },
   {
     title: "Practical Skills Training",
     icon: Laptop,
+    iconBg: "bg-blue-100 text-[#0B0757] border-blue-200",
     description: "Live Zoom sessions or full recorded library — covering every skill track from VA and customer support to CRM, automation, AI tools, and beyond. Every session is practical, not theoretical."
   },
   {
     title: "ATS-Optimised CV",
     icon: FileCheck,
+    iconBg: "bg-emerald-100 text-emerald-700 border-emerald-200",
     description: "A professionally built CV designed to pass applicant tracking systems and land in front of human recruiters — whether you're applying for remote roles or corporate positions in the UK, US, or Canada."
   },
   {
     title: "LinkedIn Profile Optimisation",
     icon: Linkedin,
+    iconBg: "bg-sky-100 text-sky-700 border-sky-200",
     description: "Your LinkedIn rewritten to attract inbound opportunities. Recruiters search LinkedIn every day for people with your skills — we make sure they find you."
   },
   {
     title: "Proposal & Cover Letter Scripts",
     icon: FileText,
+    iconBg: "bg-indigo-100 text-indigo-700 border-indigo-200",
     description: "Exact copy frameworks that our graduates use to win clients on Upwork, Contra, and LinkedIn, and to land interviews for full-time remote roles."
   },
   {
     title: "AI Job Application Training",
     icon: Cpu,
+    iconBg: "bg-purple-100 text-purple-700 border-purple-200",
     description: "We show you how to train AI tools to apply for the right roles on your behalf — smartly, strategically, and at scale. This alone puts you ahead of 90% of applicants."
   },
   {
-    title: "Real Talk from the Corporate World",
+    title: "Real Talk from Corporate World",
     icon: MessageSquare,
+    iconBg: "bg-rose-100 text-rose-700 border-rose-200",
     description: "Awanger shares real stories from her career — the struggles, the wins, and the unwritten rules of navigating international workplaces as an African professional. Because cultural fluency in a global workplace is a skill too."
   },
   {
-    title: "Student Community & Live Job Leads",
+    title: "Student Community & Job Leads",
     icon: Users,
+    iconBg: "bg-amber-100 text-[#EF7F1A] border-amber-200",
     description: "Join a private WhatsApp and Telegram network of 5,000+ AceAfrica alumni sharing remote job leads, mock interview practice, and ongoing support — long after training ends."
   },
   {
     title: "Certificate of Completion",
     icon: Award,
+    iconBg: "bg-emerald-100 text-emerald-700 border-emerald-200",
     description: "Issued on graduation and signed by Awanger Agena, Founder & Lead Trainer. Recognised within the AceAfrica alumni network and presentable to employers."
   }
 ];
@@ -74,14 +83,14 @@ export default function WhatYouGet() {
           return (
             <div
               key={idx}
-              className="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm space-y-3.5 hover:border-[#EF7F1A] hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+              className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-md space-y-3.5 hover:border-[#EF7F1A] hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
-              <div className="space-y-3">
-                <div className="w-11 h-11 rounded-2xl bg-[#0B0757] text-[#EF7F1A] flex items-center justify-center font-bold shadow-xs">
-                  <Icon className="w-5 h-5" />
+              <div className="space-y-3.5">
+                <div className={`w-12 h-12 rounded-2xl ${item.iconBg} border flex items-center justify-center font-bold shadow-xs shrink-0`}>
+                  <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0B0757] leading-snug">{item.title}</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-lg font-black text-[#0B0757] leading-snug">{item.title}</h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-normal">{item.description}</p>
               </div>
             </div>
           );

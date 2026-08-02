@@ -5,24 +5,28 @@ const steps = [
     number: "01",
     title: "Step 1: Discover",
     icon: Compass,
+    iconBg: "bg-amber-100 text-[#EF7F1A] border-amber-200",
     description: "Before we teach you anything, we help you understand yourself. What are you naturally good at? What do those skills look like in the global job market? What career path fits your personality, your lifestyle, and your goals? This is where most courses skip ahead. We don't."
   },
   {
     number: "02",
     title: "Step 2: Learn",
     icon: BookOpen,
+    iconBg: "bg-blue-100 text-[#0B0757] border-blue-200",
     description: "Four weeks of practical, hands-on training — either live on Zoom with Awanger and your cohort, or through the full recorded library at your own pace. Every session covers real tools, real workflows, and real scenarios from international workplaces."
   },
   {
     number: "03",
     title: "Step 3: Build",
     icon: Layers,
+    iconBg: "bg-indigo-100 text-indigo-700 border-indigo-200",
     description: "Your ATS-optimised CV. Your LinkedIn profile, rewritten to attract inbound recruiters. Your cover letter and proposal scripts. Your job application strategy. By the time you finish, you don't just have skills — you have a complete professional identity ready to present to the world."
   },
   {
     number: "04",
     title: "Step 4: Get Hired",
     icon: Briefcase,
+    iconBg: "bg-emerald-100 text-emerald-700 border-emerald-200",
     description: "Apply with confidence. Our student community shares live remote job leads daily. We show you exactly where to look, what to say, and how to apply in a way that gets responses — including for corporate roles in the UK, US, and Canada."
   }
 ];
@@ -51,17 +55,17 @@ export default function HowItWorks() {
             return (
               <div
                 key={step.number}
-                className="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm space-y-4 hover:shadow-lg hover:border-[#EF7F1A] transition-all duration-300 flex flex-col justify-between"
+                className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-md space-y-4 hover:shadow-xl hover:border-[#EF7F1A] transition-all duration-300 flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-2xl bg-[#0B0757] text-[#EF7F1A] flex items-center justify-center font-bold">
+                    <div className={`w-12 h-12 rounded-2xl ${step.iconBg} border flex items-center justify-center font-bold shadow-xs shrink-0`}>
                       <Icon className="w-6 h-6" />
                     </div>
                     <span className="text-2xl font-black text-slate-300">{step.number}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-[#0B0757]">{step.title}</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">{step.description}</p>
+                  <h3 className="text-xl font-black text-[#0B0757]">{step.title}</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed font-normal">{step.description}</p>
                 </div>
               </div>
             );

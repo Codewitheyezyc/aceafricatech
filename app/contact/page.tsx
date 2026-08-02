@@ -1,5 +1,5 @@
 import ContactForm from '@/components/contact/ContactForm';
-import { MapPin, Clock, Phone, Mail, MessageCircle, Facebook, Instagram, ShieldCheck, Sparkles } from 'lucide-react';
+import { MapPin, Clock, Phone, Mail, MessageCircle, Facebook, Instagram } from 'lucide-react';
 
 export default function ContactPage() {
   const whatsappUrl = "https://wa.me/+2349060001468";
@@ -31,20 +31,20 @@ export default function ContactPage() {
           {/* Left Column: Office & Social Info */}
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-3">
-              <span className="text-xs font-bold text-[#EF7F1A] uppercase tracking-widest">Reach Us Directly</span>
-              <h2 className="text-3xl font-extrabold text-[#0B0757]">Official Contacts & Location</h2>
-              <p className="text-slate-600 text-sm leading-relaxed">
+              <span className="text-xs font-extrabold text-[#EF7F1A] uppercase tracking-widest">Reach Us Directly</span>
+              <h2 className="text-3xl font-black text-[#0B0757]">Official Contacts & Location</h2>
+              <p className="text-slate-600 text-sm leading-relaxed font-normal">
                 Connect with our team via WhatsApp, phone, email, or visit our office in Abuja.
               </p>
             </div>
 
             <div className="space-y-4">
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-2xs flex items-start space-x-4">
-                <div className="w-11 h-11 rounded-xl bg-[#0B0757] text-[#EF7F1A] flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-blue-100 text-[#0B0757] border border-blue-200 flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#0B0757] text-sm">Physical Office Address</h4>
+                  <h4 className="font-extrabold text-[#0B0757] text-sm">Physical Office Address</h4>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                     No 165, CBN Estate, Lokogoma, Abuja, Nigeria
                   </p>
@@ -52,22 +52,22 @@ export default function ContactPage() {
               </div>
 
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-2xs flex items-start space-x-4">
-                <div className="w-11 h-11 rounded-xl bg-[#0B0757] text-[#EF7F1A] flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-amber-100 text-[#EF7F1A] border border-amber-200 flex items-center justify-center shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#0B0757] text-sm">Working Hours</h4>
+                  <h4 className="font-extrabold text-[#0B0757] text-sm">Working Hours</h4>
                   <p className="text-xs text-slate-600 mt-1">Monday – Friday: 7:00 AM – 9:00 PM</p>
                   <p className="text-xs text-slate-500">Weekend: 10:00 AM – 5:00 PM</p>
                 </div>
               </div>
 
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-2xs flex items-start space-x-4">
-                <div className="w-11 h-11 rounded-xl bg-[#0B0757] text-[#EF7F1A] flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 border border-emerald-200 flex items-center justify-center shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#0B0757] text-sm">Phone & WhatsApp Support</h4>
+                  <h4 className="font-extrabold text-[#0B0757] text-sm">Phone & WhatsApp Support</h4>
                   <a
                     href={whatsappUrl}
                     target="_blank"
@@ -80,11 +80,11 @@ export default function ContactPage() {
               </div>
 
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-2xs flex items-start space-x-4">
-                <div className="w-11 h-11 rounded-xl bg-[#0B0757] text-[#EF7F1A] flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-indigo-100 text-indigo-700 border border-indigo-200 flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#0B0757] text-sm">Official Email</h4>
+                  <h4 className="font-extrabold text-[#0B0757] text-sm">Official Email</h4>
                   <a
                     href="mailto:support@aceafricatech.com"
                     className="text-xs font-semibold text-slate-700 hover:text-[#EF7F1A] block mt-1"
@@ -95,9 +95,9 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Social Media Connect Links (Fixed Responsive Pill Layout) */}
+            {/* Social Media Connect Links */}
             <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
-              <h4 className="text-xs font-bold text-[#0B0757] uppercase tracking-wider">Connect on Social Media</h4>
+              <h4 className="text-xs font-extrabold text-[#0B0757] uppercase tracking-wider">Connect on Social Media</h4>
               <div className="flex flex-wrap gap-2.5">
                 <a
                   href={facebookUrl}

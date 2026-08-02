@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ShieldCheck, Award, Target, Eye, ArrowRight, Globe, CheckCircle2 } from 'lucide-react';
+import { Target, Eye, ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -63,7 +63,7 @@ export default function AboutPage() {
               Currently working as a Customer Support Specialist and Marketing Expert for a corporate organization in Toronto, Canada, Awanger brings active practitioner knowledge into the curriculum.
             </p>
             <p>
-              Having trained over 5,000 everyday Nigerians, AceAfrica focuses on actionable, practical skills rather than abstract theory — teaching you how foreign support teams operate, how to handle customer tickets, and how to pitch your skills confidently on Upwork, Contra, and LinkedIn.
+              Having trained over 5,000 everyday Africans, AceAfrica focuses on actionable, practical skills rather than abstract theory — teaching you how foreign support teams operate, how to handle customer tickets, and how to pitch your skills confidently on Upwork, Contra, and LinkedIn.
             </p>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
             href="/enroll"
             className="inline-flex items-center justify-center space-x-2 bg-[#EF7F1A] hover:bg-[#D96E0F] text-white font-bold px-6 py-3 rounded-xl text-sm sm:text-base shadow-md transition-all hover:scale-105"
           >
-            <span>Join Next Training Cohort (₦25,000)</span>
+            <span>Join Next Training Cohort</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -89,22 +89,22 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#0B0757] text-[#EF7F1A] flex items-center justify-center">
+            <div className="bg-white p-8 rounded-3xl border border-slate-200/90 shadow-md space-y-4 hover:border-[#EF7F1A] hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 rounded-2xl bg-blue-100 text-[#0B0757] border border-blue-200 flex items-center justify-center font-bold shadow-xs shrink-0">
                 <Target className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#0B0757]">Our Mission</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <h3 className="text-xl font-black text-[#0B0757]">Our Mission</h3>
+              <p className="text-sm text-slate-600 leading-relaxed font-normal">
                 To provide individuals with the tools, resources, and hands-on mentorship needed to succeed in today's digital world. Through our expertly crafted courses and personalized guidance, we aim to bridge the skills gap and empower our students to reach new heights in their professional journeys.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#0B0757] text-[#EF7F1A] flex items-center justify-center">
+            <div className="bg-white p-8 rounded-3xl border border-slate-200/90 shadow-md space-y-4 hover:border-[#EF7F1A] hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 rounded-2xl bg-amber-100 text-[#EF7F1A] border border-amber-200 flex items-center justify-center font-bold shadow-xs shrink-0">
                 <Eye className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#0B0757]">Our Vision</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <h3 className="text-xl font-black text-[#0B0757]">Our Vision</h3>
+              <p className="text-sm text-slate-600 leading-relaxed font-normal">
                 At AceAfrica, our vision is simple: to empower everyday people with digital support skills that help them stand out and thrive while working remotely, no matter where they are in the world.
               </p>
             </div>
