@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Phone, ArrowRight, Sparkles } from 'lucide-react';
+import { Menu, X, Phone, ArrowRight } from 'lucide-react';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,51 +30,57 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Banner Announcement */}
-      <div className="bg-[#0B0757] text-white text-xs py-2 px-4 border-b border-white/10">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <span className="bg-[#EF7F1A] text-white text-[10px] uppercase font-bold px-2.5 py-0.5 rounded-full">
-              Africa's Remote Work EdTech Platform
+      {/* 1. Top Announcement Bar Header */}
+      <div className="bg-[#0B0757] text-white text-xs py-2 px-3 sm:px-6 border-b border-white/10 relative z-50">
+        <div className="max-w-6xl mx-auto flex justify-between items-center space-x-2">
+          
+          {/* Left: Platform Badge & Tagline */}
+          <div className="flex items-center space-x-2 min-w-0">
+            <span className="bg-[#EF7F1A] text-white text-[9px] sm:text-[10px] uppercase font-extrabold px-2 sm:px-2.5 py-0.5 rounded-full shrink-0 whitespace-nowrap tracking-wider">
+              <span className="inline sm:hidden">AceAfrica</span>
+              <span className="hidden sm:inline">Africa's Remote Work EdTech Platform</span>
             </span>
-            <span className="hidden sm:inline text-slate-200">
+            <span className="hidden md:inline text-slate-200 text-xs truncate">
               We Train Africans to Work for the World — Dollars, Pounds & Euros.
             </span>
           </div>
-          <div className="flex items-center space-x-4">
+
+          {/* Right: Phone / WhatsApp Direct Link */}
+          <div className="flex items-center shrink-0">
             <a 
               href="https://wa.me/+2349060001468" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center space-x-1.5 text-slate-200 hover:text-[#EF7F1A] transition-colors"
+              className="flex items-center space-x-1.5 text-slate-200 hover:text-[#EF7F1A] transition-colors text-[11px] sm:text-xs font-semibold whitespace-nowrap"
             >
-              <Phone className="w-3 h-3 text-[#EF7F1A]" />
+              <Phone className="w-3 h-3 text-[#EF7F1A] shrink-0" />
               <span>+234 906 000 1468</span>
             </a>
           </div>
+
         </div>
       </div>
 
-      {/* Main Clean White Modern Navbar */}
+      {/* 2. Main Navigation Header */}
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-md py-3 border-b border-slate-100'
-            : 'bg-white py-4 border-b border-slate-100'
+            ? 'bg-white/95 backdrop-blur-md shadow-md py-2.5 sm:py-3 border-b border-slate-100'
+            : 'bg-white py-3 sm:py-4 border-b border-slate-100'
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             
             {/* Brand Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">
+            <Link href="/" className="flex items-center space-x-3 group shrink-0">
               <div className="flex items-center justify-center group-hover:scale-105 transition-transform">
                 <Image
                   src="/logo.png"
                   alt="ACEAfrica Tech Support Skills Limited"
                   width={170}
                   height={42}
-                  className="h-9 sm:h-10 w-auto object-contain"
+                  className="h-8 sm:h-10 w-auto object-contain"
                   priority
                 />
               </div>
@@ -101,7 +107,7 @@ export default function Header() {
               })}
             </nav>
 
-            {/* Primary Action Button */}
+            {/* Desktop Action Button */}
             <div className="hidden md:flex items-center space-x-4">
               <Link
                 href="/enroll"
@@ -112,27 +118,27 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Action Buttons (Enrol + Hamburger Menu) */}
             <div className="md:hidden flex items-center space-x-2">
               <Link
                 href="/enroll"
-                className="bg-[#EF7F1A] text-white px-3.5 py-1.5 rounded-lg text-xs font-bold"
+                className="bg-[#EF7F1A] hover:bg-[#D96E0F] active:scale-95 text-white px-3.5 py-1.5 rounded-xl text-xs font-black tracking-wide shadow-xs transition-all flex items-center justify-center"
               >
                 Enrol
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
+                className="p-1.5 rounded-xl text-[#0B0757] hover:bg-slate-100 active:scale-95 transition-all flex items-center justify-center border border-slate-200/80"
                 aria-label="Toggle Navigation Menu"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
 
           </div>
         </div>
 
-        {/* Mobile Menu Drawer */}
+        {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-b border-slate-200 px-4 pt-4 pb-6 space-y-3 shadow-xl">
             {navLinks.map((link) => (
@@ -140,7 +146,7 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block px-3 py-2 rounded-lg text-base font-semibold transition-colors ${
+                className={`block px-3.5 py-2.5 rounded-xl text-sm font-bold transition-colors ${
                   pathname === link.href
                     ? 'bg-[#0B0757] text-white'
                     : 'text-slate-700 hover:bg-slate-50'
@@ -153,7 +159,7 @@ export default function Header() {
               <Link
                 href="/enroll"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center bg-[#EF7F1A] text-white font-extrabold py-3 rounded-xl text-sm shadow-md"
+                className="w-full text-center bg-[#EF7F1A] text-white font-black py-3 rounded-xl text-sm shadow-md"
               >
                 Enrol Now
               </Link>
