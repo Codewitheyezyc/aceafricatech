@@ -21,8 +21,9 @@ export default function Header() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
+    { name: 'About Awanger', href: '/about' },
+    { name: 'Curriculum', href: '/services' },
+    { name: 'Pricing', href: '/#pricing' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -33,11 +34,11 @@ export default function Header() {
       <div className="bg-[#0B0757] text-white text-xs py-2 px-4 border-b border-white/10">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <span className="bg-[#EF7F1A] text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded-full">
-              Live Enrollment
+            <span className="bg-[#EF7F1A] text-white text-[10px] uppercase font-bold px-2.5 py-0.5 rounded-full">
+              Africa's Remote Work EdTech Platform
             </span>
             <span className="hidden sm:inline text-slate-200">
-              Train for remote international tech support & virtual assistant jobs.
+              We Train Africans to Work for the World — Dollars, Pounds & Euros.
             </span>
           </div>
           <div className="flex items-center space-x-4">
@@ -45,18 +46,11 @@ export default function Header() {
               href="https://wa.me/+2349060001468" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center space-x-1 text-slate-200 hover:text-[#EF7F1A] transition-colors"
+              className="flex items-center space-x-1.5 text-slate-200 hover:text-[#EF7F1A] transition-colors"
             >
               <Phone className="w-3 h-3 text-[#EF7F1A]" />
               <span>+234 906 000 1468</span>
             </a>
-            <Link 
-              href="/webinar"
-              className="text-[#EF7F1A] font-semibold hover:underline flex items-center space-x-1"
-            >
-              <Sparkles className="w-3 h-3" />
-              <span>Free Webinar</span>
-            </Link>
           </div>
         </div>
       </div>
@@ -87,7 +81,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-7">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -113,7 +107,7 @@ export default function Header() {
                 href="/enroll"
                 className="bg-[#0B0757] hover:bg-[#EF7F1A] text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 shadow-sm hover:shadow-md flex items-center space-x-2"
               >
-                <span>Enroll Now (₦25k)</span>
+                <span>Enrol Now</span>
                 <ArrowRight className="w-4 h-4 text-[#EF7F1A]" />
               </Link>
             </div>
@@ -122,9 +116,9 @@ export default function Header() {
             <div className="md:hidden flex items-center space-x-2">
               <Link
                 href="/enroll"
-                className="bg-[#EF7F1A] text-white px-3 py-1.5 rounded-lg text-xs font-bold"
+                className="bg-[#EF7F1A] text-white px-3.5 py-1.5 rounded-lg text-xs font-bold"
               >
-                Enroll
+                Enrol
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -161,14 +155,7 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center bg-[#EF7F1A] text-white font-extrabold py-3 rounded-xl text-sm shadow-md"
               >
-                Enroll Now — ₦25,000
-              </Link>
-              <Link
-                href="/webinar"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center border border-[#0B0757] text-[#0B0757] font-semibold py-2.5 rounded-xl text-sm"
-              >
-                Join Free Webinar
+                Enrol Now
               </Link>
             </div>
           </div>
