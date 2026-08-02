@@ -1,10 +1,13 @@
 import { Resend } from 'resend';
+import fs from 'fs';
+import path from 'path';
 
 const resendApiKey = process.env.RESEND_API_KEY || '';
 export const resend = new Resend(resendApiKey);
 
-export const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'contact@aceafricatech.com';
+export const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'hello@aceafricatech.com';
 export const TEAM_NOTIFICATION_EMAIL = process.env.TEAM_NOTIFICATION_EMAIL || 'hello@aceafricatech.com';
+
 
 export interface SendPaymentNotificationParams {
   fullName: string;
@@ -111,3 +114,83 @@ export async function sendContactEmail(params: SendContactMessageParams) {
     return { success: false, error };
   }
 }
+
+export interface SendLeadMagnetGuideParams {
+  email: string;
+}
+
+export async function sendLeadMagnetGuideEmail(params: SendLeadMagnetGuideParams) {
+  const fromAddress = process.env.RESEND_FROM_EMAIL || 'hello@aceafricatech.com';
+
+  if (!process.env.RESEND_API_KEY) {
+    console.log('[Dev mode] Resend API key missing. Mocking lead magnet guide email sending to:', params.email);
+    return { success: true, mock: true };
+  }
+
+  try {
+    const pdfPath = path.join(process.cwd(), 'public', 'docs', 'cover-letter-guide.pdf');
+    let pdfBuffer: Buffer;
+    
+    try {
+      pdfBuffer = await fs.promises.readFile(pdfPath);
+    } catch (readErr) {
+      console.warn('PDF file not found at public/docs/cover-letter-guide.pdf, using fallback buffer', readErr);
+      pdfBuffer = Buffer.from('AceAfrica Cover Letter Guide');
+    }
+
+    const data = await resend.emails.send({
+      from: `AceAfrica Tech <${fromAddress}>`,
+      to: [params.email],
+      subject: `🎁 Your Free Cover Letter Writing Guide is Here!`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+          <div style="background-color: #0B0757; padding: 32px 24px; text-align: center; color: white;">
+            <h1 style="margin: 0; font-size: 22px; font-weight: 800;">AceAfrica Tech Support Skills Limited</h1>
+            <p style="margin: 8px 0 0 0; color: #EF7F1A; font-size: 15px; font-weight: bold;">Your Free Guide Has Arrived 🎉</p>
+          </div>
+          
+          <div style="padding: 32px 24px; background-color: #ffffff; color: #1e293b;">
+            <h2 style="font-size: 18px; font-weight: 700; color: #0B0757; margin-top: 0;">Here is your Cover Letter Writing Guide!</h2>
+            <p style="font-size: 14px; line-height: 1.6; color: #475569;">
+              Thank you for requesting our guide. We have attached the <strong>Cover Letter Writing Guide PDF</strong> directly to this email so you can download and start applying these winning frameworks right away.
+            </p>
+            
+            <div style="margin: 24px 0; padding: 20px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #EF7F1A;">
+              <h3 style="margin: 0 0 8px 0; font-size: 15px; color: #0B0757;">Inside this guide, you will find:</h3>
+              <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #334155; line-height: 1.7;">
+                <li>The 4-part structure that hooks international recruiters immediately</li>
+                <li>How to name and translate your existing skills into global corporate terms</li>
+                <li>Real examples & templates for remote technical and support roles</li>
+              </ul>
+            </div>
+
+            <p style="font-size: 14px; line-height: 1.6; color: #475569;">
+              Ready to take the next step towards landing a dollar-paying remote job? Check out our 30-day intensive career transformation programs.
+            </p>
+
+            <div style="margin-top: 28px; text-align: center;">
+              <a href="https://aceafricatech.com/enroll" target="_blank" style="display: inline-block; background-color: #EF7F1A; color: white; padding: 12px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 14px;">
+                Explore AceAfrica Programs &rarr;
+              </a>
+            </div>
+
+            <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid #f1f5f9; text-align: center; font-size: 12px; color: #94a3b8;">
+              <p style="margin: 0;">&copy; ${new Date().getFullYear()} AceAfrica Tech Support Skills Limited. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      `,
+      attachments: [
+        {
+          filename: 'Cover_Letter_Writing_Guide.pdf',
+          content: pdfBuffer,
+        }
+      ]
+    });
+    return { success: true, data };
+  } catch (error) {
+    console.error('Error sending Resend lead magnet email:', error);
+    return { success: false, error };
+  }
+}
+

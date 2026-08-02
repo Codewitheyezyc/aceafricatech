@@ -1,5 +1,6 @@
 import HeroSlideshow from '@/components/home/HeroSlideshow';
 import StatsCounters from '@/components/home/StatsCounters';
+import LeadMagnet from '@/components/home/LeadMagnet';
 import ProblemSection from '@/components/home/ProblemSection';
 import WhoThisIsFor from '@/components/home/WhoThisIsFor';
 import PricingSection from '@/components/home/PricingSection';
@@ -24,8 +25,12 @@ export default function HomePage() {
         <StatsCounters />
       </section>
 
-      {/* 3. The Problem We Solve */}
+      {/* 3. Free Cover Letter Guide Lead Magnet */}
+      <LeadMagnet />
+
+      {/* 4. The Problem We Solve */}
       <ProblemSection />
+
 
       {/* 4. What We Teach (6 Skill Cards) */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">

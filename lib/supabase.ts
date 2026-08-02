@@ -34,3 +34,31 @@ export async function uploadPaymentProof(file: File, studentName: string): Promi
     return `https://placeholder-storage.supabase.co/receipts/proof_${Date.now()}.png`;
   }
 }
+
+export async function insertLeadMagnetSubscriber(email: string, source: string = 'cover-letter-guide') {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL.includes('placeholder')) {
+    console.log('[Dev mode] Supabase URL missing or placeholder. Mocking subscriber insertion for:', email);
+    return { success: true, mock: true };
+  }
+
+  try {
+    const { data, error } = await supabase
+      .from('lead_magnet_subscribers')
+      .upsert(
+        { email, source },
+        { onConflict: 'email', ignoreDuplicates: true }
+      )
+      .select();
+
+    if (error) {
+      console.error('Supabase insert error:', error.message);
+      return { success: false, error: error.message };
+    }
+
+    return { success: true, data };
+  } catch (err: any) {
+    console.error('Supabase insert catch error:', err);
+    return { success: false, error: err.message || 'Unknown error' };
+  }
+}
+
