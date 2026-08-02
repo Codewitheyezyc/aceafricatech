@@ -1,63 +1,81 @@
 export interface FaqItem {
   id: string;
-  category: "General" | "Enrollment & Payment" | "Training & Support" | "Career & Jobs";
   question: string;
   answer: string;
+  category: 'general' | 'enrollment' | 'training' | 'career';
 }
 
 export const faqs: FaqItem[] = [
   {
-    id: "general-1",
-    category: "General",
-    question: "What is AceAfrica Tech Support Skills Limited?",
-    answer: "AceAfrica Tech Support Skills Limited is an educational institution dedicated to training everyday Nigerians in high-demand digital skills (Customer Support, Virtual Assistant, IT Technical Support, and Tech Sales) and equipping them to secure high-paying remote jobs with international companies paying in foreign currency."
+    id: "q1",
+    category: "general",
+    question: "What exactly is AceAfrica?",
+    answer: "AceAfrica Tech Support Skills Limited is a digital skills academy that trains Africans in high-demand remote work skills — virtual assistance, customer support, CRM and automation, AI tools, email marketing, and more — and guides them step by step to discover their career path, build their professional profile, and land jobs with international companies paying in foreign currency."
   },
   {
-    id: "general-2",
-    category: "General",
-    question: "Do I need prior tech or coding experience to enroll?",
-    answer: "No! All our courses are beginner-friendly and designed from scratch. No coding background, degree, or prior tech experience is required. We teach you step-by-step everything you need to know."
+    id: "q2",
+    category: "training",
+    question: "Do I need a tech or coding background?",
+    answer: "No. Our training is designed for complete beginners. Awanger herself came from an accounting background — not tech. If you can use a smartphone and follow instructions, you can do this."
   },
   {
-    id: "enrollment-1",
-    category: "Enrollment & Payment",
-    question: "How much does the complete training cost?",
-    answer: "The complete hands-on training program costs a one-time fee of ₦25,000. This covers all live classes, practical assignments, course materials, ATS CV templates, and job placement mentorship."
+    id: "q3",
+    category: "enrollment",
+    question: "What's the difference between the Prerecorded Masterclass and the Live Cohort?",
+    answer: "The Prerecorded Masterclass (₦50,000) gives you instant access to recordings of our previous live cohort — you learn at your own pace, on your own schedule, with no live interaction. The Live Cohort (₦70,000) is four weeks of live Zoom training with Awanger — interactive, real-time, with direct feedback, career coaching, and a cohort community around you."
   },
   {
-    id: "enrollment-2",
-    category: "Enrollment & Payment",
-    question: "Do you offer installment or partial payments?",
-    answer: "No. Full payment of ₦25,000 must be completed via bank transfer before class access and training materials are granted. Partial payment or installment plans are strictly not eligible for course access."
+    id: "q4",
+    category: "enrollment",
+    question: "Which one should I choose?",
+    answer: "If you have a busy or unpredictable schedule and prefer to learn independently, the Prerecorded Masterclass is for you. If you want accountability, direct access to Awanger, and the full experience — choose the Live Cohort."
   },
   {
-    id: "enrollment-3",
-    category: "Enrollment & Payment",
-    question: "How do I confirm my payment after sending the bank transfer?",
-    answer: "After transferring ₦25,000 to our official bank account, go to the Enroll page on our website and fill out the Payment Confirmation Form, attaching your proof of payment screenshot. Alternatively, you can send your receipt directly to our official WhatsApp support at +234 906 000 1468. Once verified (usually within 2–4 hours), you will receive instant confirmation and class onboarding details."
+    id: "q5",
+    category: "enrollment",
+    question: "When does the next live cohort start?",
+    answer: "Live cohort dates are announced periodically. Join the waitlist or follow our social media pages to be notified when enrolment opens."
   },
   {
-    id: "training-1",
-    category: "Training & Support",
-    question: "How are classes delivered?",
-    answer: "Training is delivered online via flexible live virtual sessions, video tutorials, practical assignments, and interactive Q&A sessions. This allows you to learn from anywhere in Nigeria using your smartphone or laptop."
+    id: "q6",
+    category: "training",
+    question: "What tools and platforms will I learn?",
+    answer: "Depending on your track: Zendesk, Freshdesk, HubSpot, GoHighLevel, Zapier, Make, Notion, Google Workspace, Trello, Canva, ChatGPT and other AI tools, LinkedIn, Upwork, Contra, and more."
   },
   {
-    id: "training-2",
-    category: "Training & Support",
-    question: "What tools and software will I learn to use?",
-    answer: "You will master industry-standard remote work software, including Zendesk, Freshdesk, Intercom, Slack, Notion, Google Workspace, Canva, Loom, CRM platforms, and AI productivity tools (ChatGPT, Claude) to maximize your speed and job readiness."
+    id: "q7",
+    category: "career",
+    question: "Do you help with job placement after training?",
+    answer: "We don't place you in a job — but we do everything short of that. You graduate with a complete professional profile: an ATS CV, optimised LinkedIn, proposal scripts, and a job application strategy. Our student community shares live remote job leads daily, and we show you exactly where to look and how to apply effectively — including for corporate roles in the UK, US, and Canada."
   },
   {
-    id: "career-1",
-    category: "Career & Jobs",
-    question: "How will AceAfrica help me get a remote job?",
-    answer: "We provide comprehensive career coaching: building a killer ATS-compliant CV, optimizing your LinkedIn profile, setting up winning Upwork & Contra accounts, writing tailored cover letters, and practicing mock interviews with expert guidance."
+    id: "q8",
+    category: "career",
+    question: "I'm already working. Can AceAfrica help me move into a better role?",
+    answer: "Yes — and this is one of the things we do best. If you're already in a professional role but want to transition into a higher-paying remote or international position, we help you identify the transferable skills you already have, reframe them professionally, and position yourself for the roles you actually want."
   },
   {
-    id: "career-2",
-    category: "Career & Jobs",
-    question: "How much can I expect to earn in a remote role?",
-    answer: "Our graduates land remote customer support, virtual assistant, and IT support roles paying anywhere from $500 to $2,500+ monthly (paid directly in USD, GBP, or CAD depending on the hiring company)."
+    id: "q9",
+    category: "career",
+    question: "I'm an immigrant in the UK/Canada/US stuck in low-paying work. Is this for me?",
+    answer: "Absolutely. A significant part of what we do is helping African professionals in the diaspora who are overqualified for the jobs they're currently in. We help you get job-ready for the corporate roles you deserve — with the CV, LinkedIn, and confidence to go after them."
+  },
+  {
+    id: "q10",
+    category: "career",
+    question: "How much can I expect to earn after training?",
+    answer: "It depends on your track, effort, and the roles you target. Graduates in our community report earning between $400–$2,000/month in their first remote roles. VA and customer support roles typically start at $400–$800/month. Automation and CRM specialists often earn more. The earning potential grows significantly with experience."
+  },
+  {
+    id: "q11",
+    category: "general",
+    question: "Is this only for Nigerians?",
+    answer: "AceAfrica started in Nigeria and our community is majority Nigerian — but we welcome students from across Africa and the diaspora. If you're African and want access to global work opportunities, you're welcome here."
+  },
+  {
+    id: "q12",
+    category: "enrollment",
+    question: "How do I enrol?",
+    answer: "Click the Enrol Now button on this page. Complete your registration and payment. For the Prerecorded Masterclass, you'll receive your course materials within 24 hours. For the Live Cohort, you'll receive your onboarding details and cohort schedule immediately after payment."
   }
 ];
