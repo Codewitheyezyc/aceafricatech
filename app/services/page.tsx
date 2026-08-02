@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { curriculumModules } from '@/data/curriculum';
-import { CheckCircle2, Laptop, Wrench, Sparkles, ArrowRight, ShieldCheck, Target, Users, BookOpen, Clock, Award } from 'lucide-react';
+import { CheckCircle2, Wrench, Sparkles, ArrowRight, Users, BookOpen, Award } from 'lucide-react';
 
 export default function ServicesPage() {
   return (
@@ -21,36 +21,38 @@ export default function ServicesPage() {
         </p>
       </section>
 
-      {/* Program Highlights Banner */}
+      {/* Program Highlights Banner (Vibrant High-Contrast Icon Badges) */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-            <div className="w-10 h-10 rounded-xl bg-[#0B0757] text-[#EF7F1A] flex items-center justify-center mx-auto mb-3">
-              <BookOpen className="w-5 h-5" />
+          
+          <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-md space-y-3 hover:border-[#EF7F1A] hover:shadow-xl transition-all duration-300">
+            <div className="w-12 h-12 rounded-2xl bg-amber-100 text-[#EF7F1A] border border-amber-200 flex items-center justify-center mx-auto mb-3 shadow-xs">
+              <BookOpen className="w-6 h-6" />
             </div>
-            <h3 className="font-bold text-[#0B0757] text-base">100% Practical Training</h3>
-            <p className="text-xs text-slate-600">Hands-on experience with active software tools used by foreign companies.</p>
+            <h3 className="font-black text-[#0B0757] text-lg">100% Practical Training</h3>
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">Hands-on experience with active software tools used by foreign companies.</p>
           </div>
 
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-            <div className="w-10 h-10 rounded-xl bg-[#0B0757] text-[#EF7F1A] flex items-center justify-center mx-auto mb-3">
-              <Users className="w-5 h-5" />
+          <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-md space-y-3 hover:border-[#EF7F1A] hover:shadow-xl transition-all duration-300">
+            <div className="w-12 h-12 rounded-2xl bg-blue-100 text-[#0B0757] border border-blue-200 flex items-center justify-center mx-auto mb-3 shadow-xs">
+              <Users className="w-6 h-6" />
             </div>
-            <h3 className="font-bold text-[#0B0757] text-base">Mentorship & Job Leads</h3>
-            <p className="text-xs text-slate-600">Access to supportive alumni communities, job search groups, and live guidance.</p>
+            <h3 className="font-black text-[#0B0757] text-lg">Mentorship & Job Leads</h3>
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">Access to supportive alumni communities, job search groups, and live guidance.</p>
           </div>
 
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-            <div className="w-10 h-10 rounded-xl bg-[#0B0757] text-[#EF7F1A] flex items-center justify-center mx-auto mb-3">
-              <Award className="w-5 h-5" />
+          <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-md space-y-3 hover:border-[#EF7F1A] hover:shadow-xl transition-all duration-300">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 border border-emerald-200 flex items-center justify-center mx-auto mb-3 shadow-xs">
+              <Award className="w-6 h-6" />
             </div>
-            <h3 className="font-bold text-[#0B0757] text-base">Full Career Launchpad</h3>
-            <p className="text-xs text-slate-600">ATS CV revamp, LinkedIn optimization, interview prep & Upwork pitching.</p>
+            <h3 className="font-black text-[#0B0757] text-lg">Full Career Launchpad</h3>
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">ATS CV revamp, LinkedIn optimization, interview prep & Upwork pitching.</p>
           </div>
+
         </div>
       </section>
 
-      {/* 5 Course Modules Breakdown */}
+      {/* Course Modules Breakdown */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-8">
           <div className="mb-2">
@@ -59,7 +61,7 @@ export default function ServicesPage() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B0757] tracking-tight">
-            5 Core Training Modules
+            6 Core Training Modules
           </h2>
           <p className="text-slate-600 text-base">
             Each module is structured to build real-world competency and confidence.
@@ -70,14 +72,14 @@ export default function ServicesPage() {
           {curriculumModules.map((module, index) => (
             <div
               key={module.id}
-              className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-md grid grid-cols-1 lg:grid-cols-12 gap-8 items-start hover:border-[#EF7F1A] transition-all duration-200"
+              className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/90 shadow-md grid grid-cols-1 lg:grid-cols-12 gap-8 items-start hover:border-[#EF7F1A] hover:shadow-xl transition-all duration-300"
             >
               <div className="lg:col-span-5 space-y-4">
                 <div className="flex items-center space-x-3">
-                  <span className="w-8 h-8 rounded-full bg-[#0B0757] text-white font-bold flex items-center justify-center text-xs">
+                  <span className="w-9 h-9 rounded-xl bg-amber-100 text-[#EF7F1A] border border-amber-200 font-black flex items-center justify-center text-xs shadow-2xs">
                     0{index + 1}
                   </span>
-                  <span className="text-xs font-extrabold uppercase text-[#EF7F1A] tracking-wider bg-amber-50 px-3 py-1 rounded-md border border-amber-200">
+                  <span className="text-xs font-extrabold uppercase text-[#EF7F1A] tracking-wider bg-amber-50 px-3.5 py-1 rounded-md border border-amber-200">
                     {module.badge}
                   </span>
                 </div>
@@ -133,14 +135,14 @@ export default function ServicesPage() {
 
           <h2 className="text-3xl sm:text-5xl font-black text-white">Get Access to the Complete Training</h2>
           <p className="text-slate-300 text-base max-w-xl mx-auto">
-            All 5 modules, live cohort classes, ATS CV templates, Upwork scripts, and lifetime mentorship access are included for a one-time tuition fee of ₦25,000.
+            All 6 modules, live cohort classes or recorded masterclass, ATS CV templates, Upwork scripts, and lifetime mentorship access.
           </p>
           <div className="pt-2">
             <Link
               href="/enroll"
               className="inline-flex items-center space-x-2 bg-[#EF7F1A] hover:bg-[#D96E0F] text-white font-extrabold px-8 py-4 rounded-xl text-base shadow-xl transition-all hover:scale-105"
             >
-              <span>Enroll Now — ₦25,000</span>
+              <span>Enrol Now</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
