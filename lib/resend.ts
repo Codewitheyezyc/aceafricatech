@@ -139,44 +139,42 @@ export async function sendLeadMagnetGuideEmail(params: SendLeadMagnetGuideParams
     }
 
     const data = await resend.emails.send({
-      from: `AceAfrica Tech <${fromAddress}>`,
+      from: `Awanger from AceAfrica <${fromAddress}>`,
       to: [params.email],
-      subject: `🎁 Your Free Cover Letter Writing Guide is Here!`,
+      replyTo: `hello@aceafricatech.com`,
+      subject: `Your Cover Letter & Upwork Proposal Guide`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-          <div style="background-color: #0B0757; padding: 32px 24px; text-align: center; color: white;">
-            <h1 style="margin: 0; font-size: 22px; font-weight: 800;">AceAfrica Tech Support Skills Limited</h1>
-            <p style="margin: 8px 0 0 0; color: #EF7F1A; font-size: 15px; font-weight: bold;">Your Free Guide Has Arrived 🎉</p>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1e293b; line-height: 1.6; padding: 20px;">
+          <div style="padding-bottom: 16px; border-bottom: 2px solid #EF7F1A; margin-bottom: 24px;">
+            <h1 style="margin: 0; font-size: 20px; color: #0B0757;">AceAfrica Tech Support Skills Limited</h1>
+            <p style="margin: 4px 0 0 0; color: #64748b; font-size: 13px;">Africa's Remote Work EdTech Platform</p>
           </div>
           
-          <div style="padding: 32px 24px; background-color: #ffffff; color: #1e293b;">
-            <h2 style="font-size: 18px; font-weight: 700; color: #0B0757; margin-top: 0;">Here is your Cover Letter Writing Guide!</h2>
-            <p style="font-size: 14px; line-height: 1.6; color: #475569;">
-              Thank you for requesting our guide. We have attached the <strong>Cover Letter Writing Guide PDF</strong> directly to this email so you can download and start applying these winning frameworks right away.
-            </p>
-            
-            <div style="margin: 24px 0; padding: 20px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #EF7F1A;">
-              <h3 style="margin: 0 0 8px 0; font-size: 15px; color: #0B0757;">Inside this guide, you will find:</h3>
-              <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #334155; line-height: 1.7;">
-                <li>The 4-part structure that hooks international recruiters immediately</li>
-                <li>How to name and translate your existing skills into global corporate terms</li>
-                <li>Real examples & templates for remote technical and support roles</li>
-              </ul>
-            </div>
+          <p style="font-size: 15px; margin-bottom: 16px;">Hello,</p>
 
-            <p style="font-size: 14px; line-height: 1.6; color: #475569;">
-              Ready to take the next step towards landing a dollar-paying remote job? Check out our 30-day intensive career transformation programs.
-            </p>
+          <p style="font-size: 15px; margin-bottom: 16px;">
+            Thank you for requesting our <strong>Cover Letter & Upwork Proposal Guide</strong>. I have attached the complete PDF document directly to this email for you to download and review.
+          </p>
 
-            <div style="margin-top: 28px; text-align: center;">
-              <a href="https://aceafricatech.com/enroll" target="_blank" style="display: inline-block; background-color: #EF7F1A; color: white; padding: 12px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 14px;">
-                Explore AceAfrica Programs &rarr;
-              </a>
-            </div>
+          <div style="margin: 24px 0; padding: 18px 20px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #0B0757;">
+            <p style="margin: 0 0 8px 0; font-weight: bold; color: #0B0757; font-size: 14px;">What's inside your attached PDF guide:</p>
+            <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #334155;">
+              <li style="margin-bottom: 6px;">Winning Upwork proposal templates & real-world examples</li>
+              <li style="margin-bottom: 6px;">Key guidelines for positioning your skills for international roles</li>
+              <li>A curated list of 50+ remote job websites hiring African talent</li>
+            </ul>
+          </div>
 
-            <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid #f1f5f9; text-align: center; font-size: 12px; color: #94a3b8;">
-              <p style="margin: 0;">&copy; ${new Date().getFullYear()} AceAfrica Tech Support Skills Limited. All rights reserved.</p>
-            </div>
+          <p style="font-size: 14px; color: #475569; margin-bottom: 24px;">
+            If you have any questions or are ready to accelerate your career transition into high-paying remote roles, visit us at <a href="https://aceafricatech.com" target="_blank" style="color: #EF7F1A; text-decoration: none; font-weight: bold;">aceafricatech.com</a>.
+          </p>
+
+          <p style="font-size: 14px; color: #334155; margin-bottom: 4px;">Warm regards,</p>
+          <p style="font-size: 15px; font-weight: bold; color: #0B0757; margin: 0;">Awanger Agena</p>
+          <p style="font-size: 13px; color: #64748b; margin: 2px 0 0 0;">Founder, AceAfrica Tech Support Skills Limited</p>
+
+          <div style="margin-top: 36px; padding-top: 16px; border-top: 1px solid #e2e8f0; text-align: center; font-size: 11px; color: #94a3b8;">
+            <p style="margin: 0;">AceAfrica Tech Support Skills Limited &bull; hello@aceafricatech.com</p>
           </div>
         </div>
       `,

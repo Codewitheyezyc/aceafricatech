@@ -93,7 +93,7 @@ export default function LeadMagnet() {
           </div>
 
           {/* Right Column: Form or Success Card */}
-          <div className="lg:col-span-5 bg-white/5 backdrop-blur-xl p-6 sm:p-8 rounded-2xl border border-white/15 shadow-xl">
+          <div className="lg:col-span-5 bg-white/5 backdrop-blur-xl p-5 sm:p-8 rounded-2xl border border-white/15 shadow-xl">
             {submitted ? (
               <div className="text-center space-y-4 py-3 animate-fadeIn">
                 <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-400/40 flex items-center justify-center mx-auto shadow-inner">
@@ -150,17 +150,17 @@ export default function LeadMagnet() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-4 px-6 rounded-xl font-extrabold text-sm sm:text-base bg-[#EF7F1A] hover:bg-[#D96E0F] text-white transition-all shadow-lg hover:shadow-amber-500/20 active:scale-95 disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                  className="w-full py-3.5 sm:py-4 px-4 sm:px-6 rounded-xl font-black text-xs xs:text-sm sm:text-base bg-[#EF7F1A] hover:bg-[#D96E0F] text-white transition-all shadow-lg hover:shadow-amber-500/20 active:scale-95 disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center space-x-2 whitespace-nowrap"
                 >
                   {loading ? (
                     <>
-                      <Loader2 className="w-5 h-5 animate-spin" />
+                      <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin shrink-0" />
                       <span>Sending Your Guide...</span>
                     </>
                   ) : (
                     <>
-                      <Send className="w-4 h-4" />
-                      <span>Get the Free Cover Letter Guide</span>
+                      <Send className="w-4 h-4 shrink-0" />
+                      <span>Get Free Cover Letter Guide</span>
                     </>
                   )}
                 </button>

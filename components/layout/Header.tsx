@@ -36,11 +36,10 @@ export default function Header() {
           
           {/* Left: Platform Badge & Tagline */}
           <div className="flex items-center space-x-2 min-w-0">
-            <span className="bg-[#EF7F1A] text-white text-[9px] sm:text-[10px] uppercase font-extrabold px-2 sm:px-2.5 py-0.5 rounded-full shrink-0 whitespace-nowrap tracking-wider">
-              <span className="inline sm:hidden">AceAfrica</span>
-              <span className="hidden sm:inline">Africa's Remote Work EdTech Platform</span>
+            <span className="bg-[#EF7F1A] text-white text-[8.5px] xs:text-[9.5px] sm:text-[10px] uppercase font-black px-2 sm:px-2.5 py-0.5 rounded-full shrink-0 whitespace-nowrap tracking-tight sm:tracking-wider">
+              Africa's Remote Work EdTech Platform
             </span>
-            <span className="hidden md:inline text-slate-200 text-xs truncate">
+            <span className="hidden lg:inline text-slate-200 text-xs truncate">
               We Train Africans to Work for the World — Dollars, Pounds & Euros.
             </span>
           </div>
