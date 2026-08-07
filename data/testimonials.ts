@@ -28,7 +28,7 @@ export const testimonials: Testimonial[] = [
     id: "3",
     name: "Chinemerem Maria",
     badge: "AceAfrica Alumni",
-    content: "I recommend AceAfrica to every Nigerian looking to break free from local salary limits. Awanger Agena's hands-on guidance as an active support specialist in Canada gives you insider strategies that actually work.",
+    content: "I recommend AceAfrica to every Nigerian looking to break free from local salary limits. Awanger Agena's hands-on guidance as an active support specialist in London, UK gives you insider strategies that actually work.",
     image: "/testimonial3.png",
     rating: 5,
   },

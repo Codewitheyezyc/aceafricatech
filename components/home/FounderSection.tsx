@@ -35,15 +35,15 @@ export default function FounderSection() {
             </div>
             <div>
               <h3 className="font-extrabold text-2xl text-[#0B0757]">Awanger Agena</h3>
-              <p className="text-xs font-extrabold text-[#EF7F1A] uppercase tracking-wider mt-1">Founder & CEO</p>
-              <p className="text-xs text-slate-500 font-medium mt-1">London, UK & Toronto, Canada</p>
+              <p className="text-xs font-extrabold text-[#EF7F1A] uppercase tracking-wider mt-1">Founder and CEO. AceAfrica</p>
+              <p className="text-xs text-slate-500 font-medium mt-1">London UK</p>
             </div>
           </div>
 
           {/* Story Body Copy */}
           <div className="lg:col-span-7 space-y-4 text-slate-700 text-sm leading-relaxed">
             <p>
-              AceAfrica was founded by <strong>Awanger Agena</strong> — a remote work professional with over 8 years of hands-on experience across operations, executive assistance, customer support, and digital marketing, working with international companies in fintech, e-commerce, and healthcare.
+              AceAfrica was founded by <strong>Awanger Agena</strong> — a remote work professional with over 5 years of hands-on experience across remote operations, sales systems, and support infrastructure for international tech companies.
             </p>
             <p>
               Awanger didn't start with a tech background. Her degree is in Accounting. She transitioned into remote work in Nigeria in 2021 — learning, applying, and building her career entirely through the skills she now teaches. That journey took her from working remotely in Nigeria to corporate London, where she works with a fintech company — proof that the path she maps out for her students is one she has walked herself.
@@ -65,7 +65,7 @@ export default function FounderSection() {
             "I didn't start with connections or a tech degree. I started with the right skills and the willingness to show up. If I could make it from Nigeria to corporate London without a tech background — anyone who understands what to do can do the same. That's exactly why I started AceAfrica."
           </blockquote>
           <cite className="block text-xs font-extrabold text-[#EF7F1A] uppercase tracking-widest not-italic pt-2">
-            — Awanger Agena, Founder & CEO
+            — Awanger Agena, Founder and CEO. AceAfrica
           </cite>
         </div>
 

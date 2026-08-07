@@ -26,14 +26,14 @@ export default function AboutPage() {
         <div className="space-y-4 max-w-3xl mx-auto mb-8">
           <div className="mb-2">
             <span className="inline-block text-xs font-extrabold text-[#EF7F1A] uppercase tracking-widest bg-amber-50 px-5 py-2 rounded-full border border-amber-200/80">
-              Founder & CEO
+              Founder and CEO. AceAfrica
             </span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B0757]">
             Awanger Agena
           </h2>
           <p className="text-slate-600 text-base leading-relaxed">
-            Customer Support Specialist & Marketing Expert based in Toronto, Ontario, Canada with over 8 years of international experience.
+            Founder and CEO. AceAfrica based in London UK with over 5 years of hands-on experience across remote operations, sales systems, and support infrastructure for international tech companies.
           </p>
         </div>
 
@@ -51,16 +51,17 @@ export default function AboutPage() {
             </div>
             <div>
               <h3 className="font-extrabold text-xl text-[#0B0757]">Awanger Agena</h3>
-              <p className="text-xs font-bold text-[#EF7F1A]">Founder & CEO</p>
+              <p className="text-xs font-bold text-[#EF7F1A]">Founder and CEO. AceAfrica</p>
+              <p className="text-xs text-slate-500 font-medium mt-0.5">London UK</p>
             </div>
           </div>
 
           <div className="md:col-span-8 space-y-4 text-slate-700 text-sm leading-relaxed">
             <p>
-              AceAfrica Tech Support Skills Limited is led by Founder & CEO <strong>Awanger Agena</strong>, who brings over 8 years of combined experience in sales and customer support roles across international tech sectors.
+              AceAfrica Tech Support Skills Limited is led by Founder & CEO <strong>Awanger Agena</strong>, who brings over 5 years of hands-on experience across remote operations, sales systems, and support infrastructure for international tech companies.
             </p>
             <p>
-              Currently working as a Customer Support Specialist and Marketing Expert for a corporate organization in Toronto, Canada, Awanger brings active practitioner knowledge into the curriculum.
+              Currently based in London UK, Awanger brings active practitioner knowledge and experience across remote operations, sales systems, and support infrastructure into the curriculum.
             </p>
             <p>
               Having trained over 5,000 everyday Africans, AceAfrica focuses on actionable, practical skills rather than abstract theory — teaching you how foreign support teams operate, how to handle customer tickets, and how to pitch your skills confidently on Upwork, Contra, and LinkedIn.

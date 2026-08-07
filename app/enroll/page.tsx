@@ -16,7 +16,7 @@ function EnrollContent() {
   const selectedTier = pricingTiers.find(t => t.id === selectedTierId) || pricingTiers[1];
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("0847291048");
+    navigator.clipboard.writeText("0176216529");
     setCopiedAccount(true);
     setTimeout(() => setCopiedAccount(false), 2500);
   };
@@ -92,13 +92,13 @@ function EnrollContent() {
 
               <div className="space-y-1">
                 <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Account Name</span>
-                <p className="font-extrabold text-slate-900 text-sm">AceAfrica Tech Support Skills Limited</p>
+                <p className="font-extrabold text-slate-900 text-sm">Awanger Agena</p>
               </div>
 
               <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Account Number</span>
-                  <p className="font-black text-[#0B0757] text-2xl tracking-wider">0847291048</p>
+                  <p className="font-black text-[#0B0757] text-2xl tracking-wider">0176216529</p>
                 </div>
                 <button
                   onClick={handleCopy}

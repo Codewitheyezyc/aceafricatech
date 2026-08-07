@@ -103,7 +103,7 @@ export default function Footer() {
               </p>
               <p className="flex items-center justify-center md:justify-start space-x-2">
                 <Mail className="w-4 h-4 text-[#EF7F1A] shrink-0" />
-                <a href="mailto:support@aceafricatech.com" className="hover:text-[#0B0757] transition-colors">support@aceafricatech.com</a>
+                <a href="mailto:info@aceafricatech.com" className="hover:text-[#0B0757] transition-colors">info@aceafricatech.com</a>
               </p>
             </div>
           </div>

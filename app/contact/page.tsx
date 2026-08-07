@@ -86,10 +86,10 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-extrabold text-[#0B0757] text-sm">Official Email</h4>
                   <a
-                    href="mailto:support@aceafricatech.com"
+                    href="mailto:info@aceafricatech.com"
                     className="text-xs font-semibold text-slate-700 hover:text-[#EF7F1A] block mt-1"
                   >
-                    support@aceafricatech.com
+                    info@aceafricatech.com
                   </a>
                 </div>
               </div>

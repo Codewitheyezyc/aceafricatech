@@ -5,8 +5,8 @@ import path from 'path';
 const resendApiKey = process.env.RESEND_API_KEY || '';
 export const resend = new Resend(resendApiKey);
 
-export const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'hello@aceafricatech.com';
-export const TEAM_NOTIFICATION_EMAIL = process.env.TEAM_NOTIFICATION_EMAIL || 'hello@aceafricatech.com';
+export const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'info@aceafricatech.com';
+export const TEAM_NOTIFICATION_EMAIL = process.env.TEAM_NOTIFICATION_EMAIL || 'info@aceafricatech.com';
 
 
 export interface SendPaymentNotificationParams {
@@ -120,7 +120,7 @@ export interface SendLeadMagnetGuideParams {
 }
 
 export async function sendLeadMagnetGuideEmail(params: SendLeadMagnetGuideParams) {
-  const fromAddress = process.env.RESEND_FROM_EMAIL || 'hello@aceafricatech.com';
+  const fromAddress = process.env.RESEND_FROM_EMAIL || 'info@aceafricatech.com';
 
   if (!process.env.RESEND_API_KEY) {
     console.log('[Dev mode] Resend API key missing. Mocking lead magnet guide email sending to:', params.email);
@@ -141,7 +141,7 @@ export async function sendLeadMagnetGuideEmail(params: SendLeadMagnetGuideParams
     const data = await resend.emails.send({
       from: `Awanger from AceAfrica <${fromAddress}>`,
       to: [params.email],
-      replyTo: `hello@aceafricatech.com`,
+      replyTo: `info@aceafricatech.com`,
       subject: `Your Cover Letter & Upwork Proposal Guide`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1e293b; line-height: 1.6; padding: 20px;">
@@ -174,7 +174,7 @@ export async function sendLeadMagnetGuideEmail(params: SendLeadMagnetGuideParams
           <p style="font-size: 13px; color: #64748b; margin: 2px 0 0 0;">Founder, AceAfrica Tech Support Skills Limited</p>
 
           <div style="margin-top: 36px; padding-top: 16px; border-top: 1px solid #e2e8f0; text-align: center; font-size: 11px; color: #94a3b8;">
-            <p style="margin: 0;">AceAfrica Tech Support Skills Limited &bull; hello@aceafricatech.com</p>
+            <p style="margin: 0;">AceAfrica Tech Support Skills Limited &bull; info@aceafricatech.com</p>
           </div>
         </div>
       `,
