@@ -18,9 +18,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'AceAfrica Tech Support Skills Limited' }],
   icons: {
-    icon: '/icon.png',
-    shortcut: '/icon.png',
-    apple: '/icon.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    shortcut: ['/favicon.ico'],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   openGraph: {
     title: 'AceAfrica Tech Support Skills Limited | Remote Job Training',
@@ -47,6 +53,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-US" data-scroll-behavior="smooth">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body className="flex flex-col min-h-screen antialiased bg-white text-slate-900">
         <Header />
         <main className="flex-grow">{children}</main>
