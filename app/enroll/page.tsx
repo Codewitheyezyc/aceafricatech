@@ -72,14 +72,14 @@ function EnrollContent() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Column: Bank Account Details */}
-          <div className="lg:col-span-6 bg-slate-50 p-7 sm:p-9 rounded-3xl border border-slate-200/90 shadow-md space-y-6">
+          <div className="lg:col-span-6 bg-slate-50 p-5 sm:p-8 rounded-3xl border border-slate-200/90 shadow-md space-y-6">
             <div className="space-y-1">
               <span className="text-xs font-extrabold text-[#EF7F1A] uppercase tracking-widest">Step 1: Bank Transfer</span>
               <h3 className="text-xl sm:text-2xl font-black text-[#0B0757]">Official Payment Account</h3>
               <p className="text-xs text-slate-600">Transfer the exact tuition fee to our registered corporate bank account below.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-4 shadow-xs">
+            <div className="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 space-y-4 shadow-xs">
               <div className="flex items-center space-x-3 pb-3 border-b border-slate-100">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 text-[#EF7F1A] flex items-center justify-center font-bold">
                   <Building className="w-5 h-5" />
@@ -95,14 +95,14 @@ function EnrollContent() {
                 <p className="font-extrabold text-slate-900 text-sm">Awanger Agena</p>
               </div>
 
-              <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 flex items-center justify-between">
-                <div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Account Number</span>
-                  <p className="font-black text-[#0B0757] text-2xl tracking-wider">0176216529</p>
+              <div className="bg-slate-50 p-3.5 sm:p-4 rounded-xl border border-slate-200 flex items-center justify-between gap-2 overflow-hidden">
+                <div className="min-w-0 shrink">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">Account Number</span>
+                  <p className="font-black text-[#0B0757] text-lg sm:text-2xl tracking-wider truncate">0176216529</p>
                 </div>
                 <button
                   onClick={handleCopy}
-                  className="bg-[#0B0757] hover:bg-[#EF7F1A] text-white px-3 py-2 rounded-lg text-xs font-bold transition-colors flex items-center space-x-1.5 shadow-xs"
+                  className="shrink-0 bg-[#0B0757] hover:bg-[#EF7F1A] text-white px-3 py-2 rounded-lg text-xs font-bold transition-colors flex items-center space-x-1.5 shadow-xs"
                 >
                   {copiedAccount ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                   <span>{copiedAccount ? 'Copied!' : 'Copy'}</span>
@@ -130,7 +130,7 @@ function EnrollContent() {
           </div>
 
           {/* Right Column: Payment Proof Upload Form */}
-          <div className="lg:col-span-6 bg-white p-7 sm:p-9 rounded-3xl border border-slate-200 shadow-xl space-y-6">
+          <div className="lg:col-span-6 bg-white p-5 sm:p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6">
             <div className="space-y-1">
               <span className="text-xs font-extrabold text-[#EF7F1A] uppercase tracking-widest">Step 2: Confirm Payment</span>
               <h3 className="text-xl sm:text-2xl font-black text-[#0B0757]">Upload Payment Proof</h3>
