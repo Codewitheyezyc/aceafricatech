@@ -18,15 +18,15 @@ export default function TestimonialsCarousel() {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextTestimonial, 6000);
+    const timer = setInterval(nextTestimonial, 12000);
     return () => clearInterval(timer);
-  }, []);
+  }, [currentIndex]);
 
   const current = testimonials[currentIndex];
 
   return (
     <div className="relative max-w-4xl mx-auto px-4 py-4">
-      <div className="relative bg-[#0B0757] text-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-white/10 overflow-hidden">
+      <div className="relative bg-[#0B0757] text-white rounded-3xl p-6 sm:p-12 shadow-2xl border border-white/10 overflow-hidden">
         {/* Background ambient glow */}
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#EF7F1A]/20 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#EF7F1A]/10 rounded-full blur-3xl pointer-events-none" />
@@ -39,7 +39,7 @@ export default function TestimonialsCarousel() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.35 }}
             className="space-y-6 relative z-10"
           >
             {/* Rating Stars */}
@@ -50,13 +50,15 @@ export default function TestimonialsCarousel() {
             </div>
 
             {/* Testimonial Quote */}
-            <p className="text-lg sm:text-2xl font-medium text-slate-100 leading-relaxed italic">
-              "{current.content}"
-            </p>
+            <div className="max-h-[380px] sm:max-h-[340px] overflow-y-auto pr-3 space-y-3 custom-scrollbar">
+              <p className="whitespace-pre-line text-sm sm:text-base font-normal text-slate-100 leading-relaxed">
+                "{current.content}"
+              </p>
+            </div>
 
             {/* Author Meta & Student Photo */}
             <div className="flex items-center space-x-4 pt-6 border-t border-white/10">
-              <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#EF7F1A] shadow-md shrink-0">
+              <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-[#EF7F1A] shadow-md shrink-0">
                 <Image
                   src={current.image}
                   alt={current.name}
@@ -66,7 +68,7 @@ export default function TestimonialsCarousel() {
                 />
               </div>
               <div className="space-y-1">
-                <h4 className="font-bold text-lg text-white leading-snug">{current.name}</h4>
+                <h4 className="font-bold text-base sm:text-lg text-white leading-snug">{current.name}</h4>
                 <div className="inline-flex items-center space-x-1.5 bg-[#EF7F1A] text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">
                   <Award className="w-3 h-3" />
                   <span>{current.badge}</span>
@@ -77,8 +79,8 @@ export default function TestimonialsCarousel() {
         </AnimatePresence>
 
         {/* Navigation Controls */}
-        <div className="flex items-center justify-between mt-8 pt-4">
-          <div className="flex space-x-2">
+        <div className="flex items-center justify-between mt-8 pt-4 border-t border-white/10">
+          <div className="flex items-center space-x-2">
             {testimonials.map((_, idx) => (
               <button
                 key={idx}
